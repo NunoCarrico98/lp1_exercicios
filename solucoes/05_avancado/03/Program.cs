@@ -17,6 +17,7 @@ namespace LP1Exercises
             hsm.AddScore("Frodo", 567f);
             hsm.AddScore("Dumbledore", 235f);
             hsm.AddScore("Potter", 623f);
+            hsm.AddScore("Potter", 5252.56f);
 
             // Save scores to file
             hsm.Save();

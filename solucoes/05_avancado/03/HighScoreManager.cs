@@ -36,7 +36,7 @@ namespace LP1Exercises
                 for (int i = 1; i < text.Length; i++)
                 {
                     // Separate lines according to accepted format
-                    string[] subStrings = text[i].Split(',');
+                    string[] subStrings = text[i].Split(':');
 
                     // If format is incorrect or the second subString cannot be
                     // converted to float
@@ -84,12 +84,12 @@ namespace LP1Exercises
         public void Save()
         {
             // Create variable to hold all text from list
-            string text = "Name,Score\n";
+            string text = "Name:Score\n";
             // For each element of the list
             foreach (Tuple<string, float> highscore in highscores)
             {
                 // Add text with Name and score
-                text += $"{highscore.Item1},{highscore.Item2}\n";
+                text += $"{highscore.Item1}:{highscore.Item2}\n";
             }
 
             // Write all the highscores on the specified file
